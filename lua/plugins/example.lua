@@ -20,7 +20,7 @@ return {
     },
   },
 
-  -- change trouble config
+  -- change trouble config (builtin to Lazy)
   {
     "folke/trouble.nvim",
     -- opts will be merged with the parent spec
@@ -134,6 +134,7 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "prettier",
       },
     },
   },
