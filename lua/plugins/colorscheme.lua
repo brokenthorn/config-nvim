@@ -1,20 +1,29 @@
 return {
+  -- the default colorscheme for LazyVim:
   {
     "folke/tokyonight.nvim",
+    name = "tokyonight",
     lazy = true,
-    opts = { style = "night" },
   },
 
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --   priority = 1000,
-  --   config = true,
-  --   -- opts = ...
-  -- },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = true,
+  },
+
+  {
+    "ellisonleao/gruvbox.nvim",
+    name = "gruvbox",
+    lazy = true,
+  },
 
   -- Configure LazyVim to load preferred colorscheme:
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "tokyonight" },
+    opts = {
+      colorscheme = "tokyonight",
+      style = "moon",
+    },
   },
 }
