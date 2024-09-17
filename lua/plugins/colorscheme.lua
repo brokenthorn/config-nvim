@@ -1,29 +1,26 @@
 return {
-  -- the default colorscheme for LazyVim:
   {
     "folke/tokyonight.nvim",
-    name = "tokyonight",
     lazy = true,
+    priority = 1000,
+    opts = {
+      style = "storm", -- night, storm, day, moon
+      styles = {
+        -- Style to be applied to different syntax groups
+        -- Value is any valid attr-list value for `:help nvim_set_hl`
+        comments = { italic = false },
+        keywords = { italic = false },
+        -- functions = {},
+        -- variables = {},
+        -- Background styles. Can be "dark", "transparent" or "normal"
+        -- sidebars = "dark", -- style for sidebars, see below
+        -- floats = "dark", -- style for floating windows
+      },
+    },
   },
 
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = true,
-  },
-
-  {
-    "ellisonleao/gruvbox.nvim",
-    name = "gruvbox",
-    lazy = true,
-  },
-
-  -- Configure LazyVim to load preferred colorscheme:
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "tokyonight",
-      style = "moon",
-    },
+    opts = { colorscheme = "tokyonight" },
   },
 }
