@@ -27,8 +27,28 @@ opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
+opt.cursorlineopt = "line,number" -- Highlight just the line number
 opt.linebreak = true -- Wrap lines at convenient points
 opt.pumblend = 10 -- Popup blend
-opt.pumheight = 15 -- Maximum number of entries in a popup
+opt.pumheight = 20 -- Maximum number of entries in a popup
 opt.smartindent = true -- Insert indents automatically
 opt.wrap = false -- Disable line wrap
+opt.colorcolumn = "80" -- Place a column line
+
+local create_autocmd = vim.api.nvim_create_autocmd
+
+-- Restore cursor position on file open
+create_autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    local line = vim.fn.line("'\"")
+    if
+      line > 1
+      and line <= vim.fn.line("$")
+      and vim.bo.filetype ~= "commit"
+      and vim.fn.index({ "xxd", "gitrebase" }, vim.bo.filetype) == -1
+    then
+      vim.cmd('normal! g`"')
+    end
+  end,
+})

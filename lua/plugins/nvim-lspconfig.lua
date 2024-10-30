@@ -1,3 +1,5 @@
+local nvim_lsp = require("lspconfig")
+
 return {
   {
     "neovim/nvim-lspconfig",
