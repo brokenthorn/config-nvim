@@ -8,17 +8,17 @@ return {
     ---@field on_colors fun(colors: ColorScheme)
     ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
     opts = {
-      style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day` (plus moon)
+      style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day` (plus moon)
       light_style = "moon", -- The theme is used when the background is set to light
       styles = {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
-        comments = { italic = true },
+        comments = { italic = false },
         keywords = { italic = false },
         -- Background styles. Can be "dark", "transparent" or "normal":
         -- sidebars = "normal", -- I prefer NerdTree to not stand out
       },
-      day_brightness = 1, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+      -- day_brightness = 0.5, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
       -- dim_inactive = false, -- dims inactive windows
     },
   },
@@ -29,53 +29,32 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavour = "macchiato", -- latte, frappe, macchiato, mocha, auto
+      flavour = "auto", -- latte, frappe, macchiato, mocha, auto
       background = { -- :h background
-        light = "macchiato",
+        light = "latte",
         dark = "mocha",
       },
-      -- color_overrides = {
-      --   mocha = {
-      --     base = "#000000",
-      --     mantle = "#000000",
-      --     crust = "#000000",
-      --   },
+      transparent_background = false, -- disables setting the bg color.
+      -- styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+      --   comments = { "italic" }, -- Change the style of comments
+      --   conditionals = { "italic" },
+      --   loops = {},
+      --   functions = {},
+      --   keywords = {},
+      --   strings = {},
+      --   variables = {},
+      --   numbers = {},
+      --   booleans = {},
+      --   properties = {},
+      --   types = {},
+      --   operators = {},
+      --   -- miscs = {}, -- Uncomment to turn off hard-coded styles
       -- },
+      -- no_italic = true, -- force no italics
+      default_integrations = true,
+      -- enable some integrations that are not enabled by default:
       integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
         grug_far = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
       },
     },
   },
@@ -91,9 +70,9 @@ return {
       underline = true,
       bold = true,
       italic = {
-        strings = true,
+        strings = false,
         emphasis = true,
-        comments = true,
+        comments = false,
         operators = false,
         folds = true,
       },
@@ -104,8 +83,8 @@ return {
       invert_intend_guides = false,
       inverse = true, -- invert background for search, diffs, statuslines and errors
       contrast = "hard", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
-      overrides = {},
+      -- palette_overrides = {},
+      -- overrides = {},
       dim_inactive = false,
       transparent_mode = false,
     },
@@ -113,7 +92,6 @@ return {
 
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "tokyonight" },
-    -- opts = { colorscheme = "catppuccin" },
+    opts = { colorscheme = "catppuccin" },
   },
 }
