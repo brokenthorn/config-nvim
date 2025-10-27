@@ -5,9 +5,8 @@ return {
     priority = 1000,
     config = true,
     opts = {
-      -- dim_inactive = true,
-      transparent_mode = true,
-      contrast = "", -- can be "hard", "soft", ""
+      -- transparent_mode = true,
+      contrast = "hard", -- can be "hard", "soft", ""
     },
   },
   -- Configure LazyVim to load your preferred colorscheme:

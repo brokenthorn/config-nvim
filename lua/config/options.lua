@@ -16,4 +16,4 @@ g.lazyvim_eslint_auto_format = true
 
 -- Only highlight the line number of the cursor position.
 opt.cursorline = true
-opt.cursorlineopt = "number"
+opt.cursorlineopt = "both" -- line, number, both
