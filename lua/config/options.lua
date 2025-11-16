@@ -2,8 +2,13 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+local o = vim.o
 local opt = vim.opt
 local g = vim.g
+
+-- Themes that don't have an override active will respect this to switch
+-- between light and dark variants, if they have them.
+o.background = "light"
 
 -- Enable the option to require a Prettier config file
 -- If no prettier config file is found, the formatter will not be used

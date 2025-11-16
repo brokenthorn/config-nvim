@@ -32,7 +32,7 @@ return {
             },
           },
           javascript = {
-            format = { enable = false },
+            -- format = { enable = false },
             tsserver = { maxTsServerMemory = 8192 },
             preferGoToSourceDefinition = true,
             updateImportsOnFileMove = { enabled = "always" },
@@ -52,7 +52,7 @@ return {
             },
           },
           typescript = {
-            format = { enable = false },
+            -- format = { enable = false },
             tsserver = { maxTsServerMemory = 8192 },
             preferGoToSourceDefinition = true,
             updateImportsOnFileMove = { enabled = "always" },
