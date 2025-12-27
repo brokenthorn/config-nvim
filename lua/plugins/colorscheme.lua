@@ -1,13 +1,31 @@
 return {
   {
+    "catppuccin/nvim",
+    priority = 1000,
+    name = "catppuccin",
+    opts = {
+      auto = "macchiato",
+      background = {
+        light = "latte",
+        dark = "macchiato",
+      },
+      transparent_background = true,
+      float = {
+        transparent = true,
+      },
+      styles = {
+        comments = {}, -- default is { "italic" }
+        conditionals = {}, -- default is { "italic" }
+      },
+    },
+  },
+
+  {
     "ellisonleao/gruvbox.nvim",
+    enabled = false,
     priority = 1000,
     config = true,
     opts = {
-      terminal_colors = true, -- add neovim terminal colors
-      undercurl = true,
-      underline = true,
-      bold = true,
       italic = {
         strings = true,
         emphasis = true,
@@ -15,14 +33,7 @@ return {
         operators = false,
         folds = true,
       },
-      strikethrough = true,
-      invert_selection = false,
-      invert_signs = false,
-      invert_tabline = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
       contrast = "hard", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
-      overrides = {},
       dim_inactive = false,
       transparent_mode = false,
     },
@@ -31,7 +42,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin",
     },
   },
 }

@@ -7,8 +7,6 @@ return {
 
   -- Ability to add/delete/change surroundings
   { import = "lazyvim.plugins.extras.coding.mini-surround" },
-  -- Annotation generator
-  { import = "lazyvim.plugins.extras.coding.neogen" },
 
   -- File Explorer. Disabled because using oil.nvim atm.
   -- { import = "lazyvim.plugins.extras.editor.mini-files" },

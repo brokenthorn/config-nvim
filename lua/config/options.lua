@@ -8,7 +8,7 @@ local g = vim.g
 
 -- Themes that don't have an override active will respect this to switch
 -- between light and dark variants, if they have them.
-o.background = "light"
+o.background = "dark"
 
 -- Enable the option to require a Prettier config file
 -- If no prettier config file is found, the formatter will not be used
@@ -21,4 +21,4 @@ g.lazyvim_eslint_auto_format = true
 
 -- Only highlight the line number of the cursor position.
 opt.cursorline = true
-opt.cursorlineopt = "both" -- line, number, both
+opt.cursorlineopt = "number" -- line, number, both

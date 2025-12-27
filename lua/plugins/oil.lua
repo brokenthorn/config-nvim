@@ -7,7 +7,7 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
     keys = {
       {
-        "<leader>fo",
+        "<leader>o",
         function()
           require("oil").open_float()
         end,

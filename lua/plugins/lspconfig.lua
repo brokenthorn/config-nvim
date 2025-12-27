@@ -6,6 +6,11 @@ return {
     -- Sets the default configuration for an LSP client (or all clients if the special name "*" is used).
     ---@type table<string, lazyvim.lsp.Config|boolean>
     servers = {
+      -- fsautocomplete = {
+      --   settings = {
+      --     FSharp = { },
+      --   },
+      -- },
       -- docs: https://www.lazyvim.org/extras/lang/typescript
       vtsls = {
         -- explicitly add default filetypes, so that we can extend
