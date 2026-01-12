@@ -4,14 +4,14 @@ return {
     priority = 1000,
     name = "catppuccin",
     opts = {
-      auto = "macchiato",
+      auto = true,
       background = {
         light = "latte",
-        dark = "macchiato",
+        dark = "frappe",
       },
-      transparent_background = true,
+      transparent_background = false,
       float = {
-        transparent = true,
+        transparent = false,
       },
       styles = {
         comments = {}, -- default is { "italic" }
