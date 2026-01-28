@@ -3,7 +3,12 @@ return {
     "stevearc/oil.nvim",
     lazy = false,
     -- Optional dependencies
-    dependencies = { { "nvim-mini/mini.icons", opts = {} } }, -- lazyvim comes with mini.icons built-in
+    dependencies = {
+      {
+        "nvim-mini/mini.icons",
+        opts = {},
+      },
+    }, -- lazyvim comes with mini.icons built-in
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
     keys = {
       {
@@ -91,7 +96,7 @@ return {
         -- Enable or disable LSP file operations
         enabled = true,
         -- Time to wait for LSP file operations to complete before skipping
-        timeout_ms = 5000,
+        timeout_ms = 10000,
         -- Set to true to autosave buffers that are updated with LSP willRenameFiles
         -- Set to "unmodified" to only save unmodified buffers
         autosave_changes = true,
@@ -99,10 +104,10 @@ return {
 
       float = {
         -- Padding around the floating window
-        padding = 1,
+        padding = 0,
         -- max_width and max_height can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
-        max_width = 0,
-        max_height = 0,
+        max_width = 0.9,
+        max_height = 0.7,
         border = "single",
         -- preview_split: Split direction: "auto", "left", "right", "above", "below".
         preview_split = "auto",

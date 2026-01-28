@@ -13,6 +13,8 @@ return {
   -- show current code context in statusbar
   { import = "lazyvim.plugins.extras.editor.navic" },
 
+  -- Rust (crates.nvim, rustaceanvim, neotest)
+  { import = "lazyvim.plugins.extras.lang.rust" },
   -- TypeScript LSP with provisions for Deno's LSP
   { import = "lazyvim.plugins.extras.lang.typescript" },
   -- jsonls, schemastore packages, json, json5, jsonc
