@@ -7,19 +7,20 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
-local function augroup(name)
-  return vim.api.nvim_create_augroup("paul_" .. name, { clear = true })
-end
-
--- Remove LazyVim's default wrap_spell autocmd:
-vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
--- Re-add LazyVim's wrap_spell autocmd, but
--- remove markdown from the list of file typesf;
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("wrap_spell"),
-  pattern = { "text", "plaintex", "typst", "gitcommit" },
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.spell = true
-  end,
-})
+-- local function augroup(name)
+--   return vim.api.nvim_create_augroup("paul_" .. name, { clear = true })
+-- end
+--
+-- -- Remove LazyVim's default wrap_spell autocmd:
+-- vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+--
+-- -- Re-add LazyVim's wrap_spell autocmd, but remove markdown from the list of
+-- -- file types:
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = augroup("wrap_spell"),
+--   pattern = { "text", "plaintex", "typst", "gitcommit" },
+--   callback = function()
+--     vim.opt_local.wrap = true
+--     vim.opt_local.spell = true
+--   end,
+-- })
