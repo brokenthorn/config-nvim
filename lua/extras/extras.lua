@@ -25,6 +25,8 @@ return {
   { import = "lazyvim.plugins.extras.lang.dotnet" },
   -- TOML file type support
   { import = "lazyvim.plugins.extras.lang.toml" },
+  -- SQL (language and tons of tools)
+  { import = "lazyvim.plugins.extras.lang.sql" },
 
   -- Dotfiles suport
   { import = "lazyvim.plugins.extras.util.dot" },
